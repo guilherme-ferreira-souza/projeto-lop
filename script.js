@@ -23,13 +23,13 @@ function draw(){
         fill('blue');
         rect(100, 250, 200, 50, 15); 
         fill('black'); 
-        text("Categorias", 160, 280);
+        text("Créditos", 150, 280);
 
         //Botão 3
         fill('blue');
         rect(100, 350, 200, 50, 15); 
         fill('black'); 
-        text("Créditos", 160, 280);
+        text("Categorias", 140, 380);
     
         
         //verificando se o mouse está na area do botão 1
@@ -107,12 +107,18 @@ function draw(){
         fill('blue'); //cor do botão 
         rect(100, 150, 200, 50, 15); //retângulo  do botão 
         fill('black'); //cor do text
-        text("Categoria 1", 160, 180); //texto do botão 
+        text("Categoria 1", 130, 180); //texto do botão 
     
         //Botão 2
         fill('blue');
         rect(100, 250, 200, 50, 15); 
         fill('black'); 
-        text("Categoria 2", 160, 280);
+        text("Categoria 2", 130, 280);
+
+        //Botão return
+        fill('blue');
+        rect(100, 350, 200, 50, 15);
+        fill('black');
+        text("Voltar", 165, 380);
     }
 }
