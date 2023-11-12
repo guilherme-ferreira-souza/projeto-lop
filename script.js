@@ -1,3 +1,4 @@
+// tela inicial
 var tela = 0
 function setup() {
     createCanvas(500, 600);
@@ -114,11 +115,5 @@ function draw(){
         rect(100, 250, 200, 50, 15); 
         fill('black'); 
         text("Categoria 2", 130, 280);
-
-        //Botão return
-        fill('blue');
-        rect(100, 350, 200, 50, 15);
-        fill('black');
-        text("Voltar", 165, 380);
     }
 }
