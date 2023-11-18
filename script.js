@@ -80,6 +80,22 @@ function draw(){
         textSize(17);
         fill('black'); //cor do texto
         text("Texto da questão 1", 160, 180);
+
+        //Botão 3
+        fill('blue');
+        rect(400, 500, 100, 50, 15); 
+        fill('black'); 
+        textSize(25);
+        text("Voltar", 480, 530);
+
+        if(mouseX>=400 && mouseX<=(400+100)&& mouseY>=500 && mouseY<=(500+50)){ 
+          
+            //verificando se o mouse foi pressionado no botão 1
+            
+              if(mouseIsPressed){ 
+                  tela=0; //atribuição  do valor 1 mudando para a tela 1
+              }
+        }
     }
 
     if(tela==2){
@@ -94,6 +110,22 @@ function draw(){
         textSize(17);
         fill('black'); //cor do texto
         text("texto dos creditos", 130 , 350);
+
+        //Botão 3
+        fill('blue');
+        rect(400, 500, 100, 50, 15); 
+        fill('black'); 
+        textSize(25);
+        text("Voltar", 415, 530);
+
+        if(mouseX>=400 && mouseX<=(400+100)&& mouseY>=500 && mouseY<=(500+50)){ 
+          
+            //verificando se o mouse foi pressionado no botão 1
+            
+              if(mouseIsPressed){ 
+                  tela=0; //atribuição  do valor 1 mudando para a tela 1
+              }
+        }
     }
 
     if(tela==3){
@@ -115,5 +147,20 @@ function draw(){
         rect(100, 250, 200, 50, 15); 
         fill('black'); 
         text("Categoria 2", 130, 280);
+
+        //Botão 3
+        fill('blue');
+        rect(400, 500, 100, 50, 15); 
+        fill('black'); 
+        text("Voltar", 415, 530);
+
+        if(mouseX>=400 && mouseX<=(400+100)&& mouseY>=500 && mouseY<=(500+50)){ 
+          
+            //verificando se o mouse foi pressionado no botão 1
+            
+              if(mouseIsPressed){ 
+                  tela=0; //atribuição  do valor 1 mudando para a tela 1
+              }
+        }
     }
 }
