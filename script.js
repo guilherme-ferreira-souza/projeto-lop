@@ -1,6 +1,5 @@
 // tela inicial
 var tela = 0
-var mudarTela = 0
 function setup() {
     createCanvas(500, 600);
 }
@@ -9,22 +8,22 @@ function mouseClicked(){
     if(tela == 1){
         if(mouseX>=60 && mouseX<=(60+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela=100
         }
         if(mouseX>=160 && mouseX<=(160+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela=100
         }
         if(mouseX>=260 && mouseX<=(260+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela=100
         }
         if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
+            
             tela = 4
         }
 
@@ -32,46 +31,56 @@ function mouseClicked(){
     else if(tela == 4){
         if(mouseX>=60 && mouseX<=(60+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela=100
         }
         if(mouseX>=160 && mouseX<=(160+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela = 5
         }
         if(mouseX>=260 && mouseX<=(260+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela=100
         }
         if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 5
+            
+            tela=100
         }
 
     }
     else if(tela == 5){
         if(mouseX>=60 && mouseX<=(60+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela = 99
         }
         if(mouseX>=160 && mouseX<=(160+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela=100
         }
         if(mouseX>=260 && mouseX<=(260+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 0
+            
+            tela=100
         }
         if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
-            //verificando se o mouse foi pressionado no botão de voltar
-            tela = 99
+            
+            tela=100
+        }
+    }
+    else if(tela == 100 || tela == 99){
+        if(mouseX>=400 && mouseX<=(400+100)&& mouseY>=500 && mouseY<=(500+50)){ 
+            tela = 0
+        }
+    }
+    else if(tela == 3){
+        if(mouseX>=400 && mouseX<=(400+100)&& mouseY>=500 && mouseY<=(500+50)){ 
+            tela = 0
         }
     }
 }
@@ -148,10 +157,10 @@ function draw(){
         fill('black'); 
         text("QUESTÃO 1", 100, 70);
         
-        textAlign(RIGHT);
+        textAlign(CENTER);
         textSize(17);
         fill('black'); //cor do texto
-        text("Texto da questão 1", 160, 180);
+        text("Por um ponto podemos traçar quantas retas?", 225, 180);
 
         // Alternativa A
         fill('blue');
@@ -159,7 +168,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("alternativa A", 70, 380)
+        text("1", 70, 380)
 
         // Alternativa B
         fill('blue');
@@ -167,7 +176,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("alternativa b", 170, 380)
+        text("2", 170, 380)
 
         // Alternativa C
         fill('blue');
@@ -175,7 +184,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("alternativa c", 270, 380)
+        text("3", 270, 380)
 
         // Alternativa D
         fill('blue');
@@ -183,7 +192,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("Alternativa D", 370, 380)
+        text("Infinitas", 370, 380)
 
         
     }
@@ -244,14 +253,7 @@ function draw(){
         fill('black'); 
         text("Voltar", 415, 530);
 
-        if(mouseX>=400 && mouseX<=(400+100)&& mouseY>=500 && mouseY<=(500+50)){ 
-          
-            //verificando se o mouse foi pressionado no botão de voltar
-            
-              if(mouseIsPressed){ 
-                  tela=0; //atribuição  do valor 0 mudando para a tela 0
-              }
-        }
+        
     }
 
     if(tela==4){
@@ -262,26 +264,26 @@ function draw(){
         fill('black'); 
         text("QUESTÃO 2", 100, 70);
         
-        textAlign(RIGHT);
+        textAlign(CENTER);
         textSize(17);
         fill('black'); //cor do texto
-        text("Texto da questão 2", 160, 180);
+        text("Qual a classificação dada para um ângulo que tem mais de 90°?", 250, 180);
 
         // Alternativa A
         fill('blue');
         rect(60, 350, 15, 15, 15); 
         fill('black');
         textAlign(CENTER);
-        textSize(15)
-        text("alternativa A", 70, 380)
+        textSize(15);
+        text("Reto", 70, 380);
 
         // Alternativa B
         fill('blue');
         rect(160, 350, 15, 15, 15); 
         fill('black');
         textAlign(CENTER);
-        textSize(15)
-        text("alternativa b", 170, 380)
+        textSize(15);
+        text("Obtuso", 170, 380);
 
         // Alternativa C
         fill('blue');
@@ -289,7 +291,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("alternativa c", 270, 380)
+        text("Nulo", 270, 380);
 
         // Alternativa D
         fill('blue');
@@ -297,15 +299,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("Alternativa D", 370, 380)
-
-        if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            //verificando se o mouse foi pressionado no botão de voltar
-            if(mudarTela == 1){
-                tela = 5
-            }
-        }
+        text("Agudo", 370, 380);
     }
 
     if(tela==5){
@@ -316,10 +310,10 @@ function draw(){
         fill('black'); 
         text("QUESTÃO 3", 100, 70);
         
-        textAlign(RIGHT);
+        textAlign(CENTER);
         textSize(17);
         fill('black'); //cor do texto
-        text("Texto da questão 3", 160, 180);
+        text("Todo número terminado em 00 é divisível por:", 225, 180);
 
         // Alternativa A
         fill('blue');
@@ -327,7 +321,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("alternativa A", 70, 380)
+        text("1, 2, 4, 5,\n10 e 100", 70, 380)
 
         // Alternativa B
         fill('blue');
@@ -335,7 +329,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("alternativa b", 170, 380)
+        text("1, 2, 3, 5,\n100", 170, 380)
 
         // Alternativa C
         fill('blue');
@@ -343,7 +337,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("alternativa c", 270, 380)
+        text("1, 10, 15 e 100", 270, 380)
 
         // Alternativa D
         fill('blue');
@@ -351,7 +345,7 @@ function draw(){
         fill('black');
         textAlign(CENTER);
         textSize(15)
-        text("Alternativa D", 370, 380)
+        text("6, 7 e 11", 370, 380)
 
         if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
           
@@ -365,5 +359,22 @@ function draw(){
         textAlign(CENTER)
         textSize(25)
         text("PARABÉNS VOCÊ PASSOU", 230, 100)
+        // BOTÃO VOLTAR
+        fill('blue');
+        rect(400, 500, 100, 50, 15); 
+        fill('black'); 
+        text("Voltar", 445, 530);
+    }
+
+    if(tela==100){
+        background(230)
+        textAlign(CENTER)
+        textSize(25)
+        text("VOCÊ ERROU", 230, 100)
+        // BOTÃO VOLTAR
+        fill('blue');
+        rect(400, 500, 100, 50, 15); 
+        fill('black'); 
+        text("Voltar", 445, 530);
     }
 }
