@@ -1,5 +1,9 @@
 // tela inicial
 var tela = 0
+//function preload(){
+    //fundo = loadImage("fundo.png")
+    //fotocreditos = loadImage("unnamed.jpg")
+//}
 function setup() {
     createCanvas(500, 600);
 }
@@ -205,6 +209,7 @@ function draw(){
         fill('black'); 
         text("CRÉDITOS", 100, 70);
         
+        //image(fotocreditos, 100, 100, 300, 300)
         textAlign(LEFT);
         textSize(17);
         fill('black'); //cor do texto
