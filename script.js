@@ -1,9 +1,11 @@
 // tela inicial
 var tela = 0
-//function preload(){
-    //fundo = loadImage("fundo.png")
-    //fotocreditos = loadImage("unnamed.jpg")
-//}
+var fundo 
+var fotocreditos
+function preload(){
+    fundo = loadImage("fundo.jpg")
+    fotocreditos = loadImage("unnamed.jpg")
+}
 function setup() {
     createCanvas(500, 600);
 }
@@ -11,69 +13,69 @@ function setup() {
 function mouseClicked(){
     if(tela == 1){
         if(mouseX>=60 && mouseX<=(60+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
         if(mouseX>=160 && mouseX<=(160+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
         if(mouseX>=260 && mouseX<=(260+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
         if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela = 4
         }
 
     }
     else if(tela == 4){
         if(mouseX>=60 && mouseX<=(60+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
         if(mouseX>=160 && mouseX<=(160+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela = 5
         }
         if(mouseX>=260 && mouseX<=(260+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
         if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
 
     }
     else if(tela == 5){
         if(mouseX>=60 && mouseX<=(60+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela = 99
         }
         if(mouseX>=160 && mouseX<=(160+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
         if(mouseX>=260 && mouseX<=(260+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
         if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
-            
+
+
             tela=100
         }
     }
@@ -88,23 +90,25 @@ function mouseClicked(){
         }
     }
 }
-  
+
 function draw(){
     //tela de menu
     if(tela==0){
+        
         background(230);   //cor de fundo
+        image(fundo,0,0,500,600)
         textAlign(LEFT);  //Alinhamento do texto a esquerda 
         textSize(25)  //tamanho da tela
-    
+
         fill('black'); 
         text("QUIZ MATEMÁTICO", 100, 70);
-    
+
         //Botão 1
         fill('blue'); //cor do botão 
         rect(100, 150, 200, 50, 15); //retângulo  do botão 
         fill('black'); //cor do text
         text("Jogar", 160, 180); //texto do botão 
-    
+
         //Botão 2
         fill('blue');
         rect(100, 250, 200, 50, 15); 
@@ -116,26 +120,26 @@ function draw(){
         rect(100, 350, 200, 50, 15); 
         fill('black'); 
         text("Categorias", 140, 380);
-    
-        
+
+
         //verificando se o mouse está na area do botão 1
-    
+
         if(mouseX>=100 && mouseX<=(100+200)&& mouseY>=150 && mouseY<=(150+50)){ 
-          
+
           //verificando se o mouse foi pressionado no botão 1
-          
+
             if(mouseIsPressed){ 
                 tela=1; //atribuição  do valor 1 mudando para a tela 1
             }
         }
-    
-        
+
+
         //verificando se o mouse está na area do botão 2
-    
+
         if(mouseX>=100 && mouseX<=(100+200)&& mouseY>=250 && mouseY<=(250+50)){
-          
+
           //verificando se o mouse foi pressionado no botão 2
-          
+
             if(mouseIsPressed){ 
                 tela=2;
             }
@@ -143,9 +147,9 @@ function draw(){
 
 
         //verificando se o mouse está na area do botão 3
-        
+
         if(mouseX>=100 && mouseX<=(100+200)&& mouseY>=350 && mouseY<=(350+50)){
-          
+
             //verificando se o mouse foi pressionado no botão 3
 
             if(mouseIsPressed){ 
@@ -154,13 +158,14 @@ function draw(){
         }
     }
     if(tela==1){
-        background(230);   //cor de fundo
+        background(120);   //cor de fundo
+        image(fundo,0,0,500,600)
         textAlign(LEFT);  //Alinhamento do texto a esquerda 
         textSize(25)  //tamanho da tela
-    
+
         fill('black'); 
         text("QUESTÃO 1", 100, 70);
-        
+
         textAlign(CENTER);
         textSize(17);
         fill('black'); //cor do texto
@@ -198,34 +203,36 @@ function draw(){
         textSize(15)
         text("Infinitas", 370, 380)
 
-        
+
     }
 
     if(tela==2){
         background(230);   //cor de fundo
+        image(fundo,0,0,500,600)
         textAlign(LEFT);  //Alinhamento do texto a esquerda 
         textSize(25)  //tamanho da tela
-    
+
         fill('black'); 
-        text("CRÉDITOS", 100, 70);
-        
-        //image(fotocreditos, 100, 100, 300, 300)
-        textAlign(LEFT);
+        text("CRÉDITOS", 150, 70);
+
+        image(fotocreditos, 130, 100, 200, 200)
+        textAlign(RIGHT);
         textSize(17);
         fill('black'); //cor do texto
-        text("texto dos creditos", 130 , 350);
+        text("Programador: Guilherme Ferreira de Brito Souza", 400 , 330);
 
         //Botão voltar
         fill('blue');
         rect(400, 500, 100, 50, 15); 
-        fill('black'); 
+        fill('black');
+        textAlign(LEFT);
         textSize(25);
         text("Voltar", 415, 530);
 
         if(mouseX>=400 && mouseX<=(400+100)&& mouseY>=500 && mouseY<=(500+50)){ 
-          
+
             //verificando se o mouse foi pressionado no botão voltar
-            
+
               if(mouseIsPressed){ 
                   tela=0; //atribuição  do valor 0 mudando para a tela 0
               }
@@ -234,18 +241,19 @@ function draw(){
 
     if(tela==3){
         background(230);   //cor de fundo
+        image(fundo,0,0,500,600)
         textAlign(LEFT);  //Alinhamento do texto a esquerda 
         textSize(25)  //tamanho da tela
-    
+
         fill('black'); 
         text("Categorias", 100, 70);
-        
+
         //Botão 1
         fill('blue'); //cor do botão 
         rect(100, 150, 200, 50, 15); //retângulo  do botão 
         fill('black'); //cor do text
         text("Categoria 1", 130, 180); //texto do botão 
-    
+
         //Botão 2
         fill('blue');
         rect(100, 250, 200, 50, 15); 
@@ -258,17 +266,18 @@ function draw(){
         fill('black'); 
         text("Voltar", 415, 530);
 
-        
+
     }
 
     if(tela==4){
         background(230);   //cor de fundo
+        image(fundo,0,0,500,600)
         textAlign(LEFT);  //Alinhamento do texto a esquerda 
         textSize(25)  //tamanho da tela
-    
+
         fill('black'); 
         text("QUESTÃO 2", 100, 70);
-        
+
         textAlign(CENTER);
         textSize(17);
         fill('black'); //cor do texto
@@ -309,12 +318,13 @@ function draw(){
 
     if(tela==5){
         background(230);   //cor de fundo
+        image(fundo,0,0,500,600)
         textAlign(LEFT);  //Alinhamento do texto a esquerda 
         textSize(25)  //tamanho da tela
-    
+
         fill('black'); 
         text("QUESTÃO 3", 100, 70);
-        
+
         textAlign(CENTER);
         textSize(17);
         fill('black'); //cor do texto
@@ -353,14 +363,15 @@ function draw(){
         text("6, 7 e 11", 370, 380)
 
         if(mouseX>=360 && mouseX<=(360+15)&& mouseY>=350 && mouseY<=(350+15)){ 
-          
+
             //verificando se o mouse foi pressionado no botão de voltar
-            
+
         }
     }
 
     if(tela==99){
         background(230)
+        image(fundo,0,0,500,600)
         textAlign(CENTER)
         textSize(25)
         text("PARABÉNS VOCÊ PASSOU", 230, 100)
@@ -373,6 +384,7 @@ function draw(){
 
     if(tela==100){
         background(230)
+        image(fundo,0,0,500,600)
         textAlign(CENTER)
         textSize(25)
         text("VOCÊ ERROU", 230, 100)
